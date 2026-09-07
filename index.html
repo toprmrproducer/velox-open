@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>VELOX — Puffer, Reengineered</title>
+    <meta name="description" content="VELOX FW26. Three colours. Infinite possibilities. An interactive 3D puffer experience." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="./assets/index-DhELVpTd.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DWPQKbLb.css">
+  </head>
+  <body>
+    <!-- ===================== LOADER ===================== -->
+    <div id="loader" class="loader">
+      <div class="loader__inner">
+        <div class="loader__brand">VELOX</div>
+        <div class="loader__bar"><span id="loaderFill" class="loader__fill"></span></div>
+        <div class="loader__pct"><span id="loaderPct">0</span>%</div>
+        <div class="loader__hint">Preparing the atelier</div>
+      </div>
+    </div>
+
+    <!-- ===================== DYNAMIC BACKGROUND ===================== -->
+    <div class="bg" aria-hidden="true">
+      <div id="bgA" class="bg__layer is-active"></div>
+      <div id="bgB" class="bg__layer"></div>
+      <div class="bg__sweep" aria-hidden="true"></div>
+      <div class="bg__grain" aria-hidden="true"></div>
+      <div class="bg__vignette"></div>
+    </div>
+
+    <!-- ===================== 3D CANVAS ===================== -->
+    <canvas id="scene" class="scene"></canvas>
+
+    <!-- ===================== HERO OVERLAY ===================== -->
+    <header class="nav">
+      <a class="nav__brand" href="#top" aria-label="VELOX home">
+        <svg class="nav__mark" viewBox="0 0 40 40" aria-hidden="true">
+          <path d="M4 6 L20 34 L36 6" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>VELOX</span>
+      </a>
+      <nav class="nav__links" id="navLinks">
+        <a href="#shop" data-scroll>Shop</a>
+        <a href="#collection" data-scroll>Collections</a>
+        <a href="#technology" data-scroll>Engineering</a>
+        <a href="#about" data-scroll>About</a>
+      </nav>
+      <button class="nav__burger" id="navBurger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+      <div class="nav__right">
+        <button class="nav__icon" id="navSearch" aria-label="Search">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg>
+        </button>
+        <button class="nav__icon" id="navUser" aria-label="Account">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
+        </button>
+        <button class="nav__icon nav__cart" id="navCart" aria-label="Cart">
+          <svg viewBox="0 0 24 24"><path d="M6 7h12l-1.2 12.2a2 2 0 0 1-2 1.8H9.2a2 2 0 0 1-2-1.8L6 7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+          <span class="nav__badge" id="cartCount">0</span>
+        </button>
+        <span class="nav__tag">A HIGHER<br/>STANDARD</span>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- HERO -->
+      <section class="hero" id="hero">
+        <!-- left copy -->
+        <div class="hero__copy">
+          <div class="eyebrow reveal">VELOX · A HIGHER STANDARD</div>
+          <div class="hero__mark reveal">
+            <img id="heroMark" src="campaign/wordmarks/cash-money-green.png" alt="Cash Money Green" />
+          </div>
+          <p class="hero__tag reveal" id="heroTag">More than money. A mindset.</p>
+          <p class="hero__blurb reveal" id="heroBlurb">
+            High-visibility lime. Feather-light fill, ripstop shell — engineered to be seen and to last.
+          </p>
+          <button class="btn btn--pill reveal" id="exploreBtn">
+            SHOP CASH MONEY GREEN
+            <svg viewBox="0 0 24 24"><line x1="4" y1="12" x2="19" y2="12"/><polyline points="13 6 20 12 13 18"/></svg>
+          </button>
+
+          <div class="hero__pager reveal">
+            <span class="dash" data-go="0"></span>
+            <span class="dash" data-go="1"></span>
+            <span class="dash" data-go="2"></span>
+            <span class="pager__num"><b id="pagerCur">01</b> / 03</span>
+          </div>
+
+          <ul class="features reveal">
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M12 3c4 4 6 7 6 11a6 6 0 0 1-12 0c0-4 2-7 6-11z"/></svg>
+              <span>ULTRA<br/>LIGHTWEIGHT</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M8 4v9a4 4 0 1 0 8 0V4"/><path d="M12 20v-2"/></svg>
+              <span>THERMAL<br/>PERFORMANCE</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M12 3l4 5-4 13-4-13 4-5z"/><line x1="8" y1="8" x2="16" y2="8"/></svg>
+              <span>PREMIUM<br/>MATERIALS</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- center product label -->
+        <div class="hero__label">
+          <span class="hero__label-idx" id="labelIdx">01</span>
+          <div>
+            <div class="hero__label-name" id="labelName">CASH MONEY</div>
+            <div class="hero__label-gender" id="labelGender">GREEN · MEN'S PUFFER</div>
+            <div class="hero__label-price" id="labelPrice">$249</div>
+          </div>
+        </div>
+
+        <!-- right side cards (the other two colourways) -->
+        <div class="sidecards" id="sidecards"></div>
+
+        <!-- bottom-right controls -->
+        <div class="hero__arrows">
+          <button class="round-btn" id="prevBtn" aria-label="Previous jacket">
+            <svg viewBox="0 0 24 24"><polyline points="15 6 9 12 15 18"/></svg>
+          </button>
+          <button class="round-btn" id="nextBtn" aria-label="Next jacket">
+            <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg>
+          </button>
+        </div>
+
+        <!-- interaction hints -->
+        <div class="hint hint--drag" id="hintDrag">
+          <svg viewBox="0 0 24 24"><rect x="8" y="3" width="8" height="13" rx="4"/><line x1="12" y1="6" x2="12" y2="9"/></svg>
+          CLICK + DRAG TO ROTATE
+        </div>
+        <div class="hint hint--light">
+          <svg viewBox="0 0 24 24"><rect x="8" y="3" width="8" height="13" rx="4"/><path d="M12 20v1"/></svg>
+          MOVE MOUSE TO SHIFT LIGHT
+        </div>
+
+        <!-- bottom bar -->
+        <div class="hero__foot">
+          <div class="hero__foot-left">FASHION &nbsp;&times;&nbsp; TECHNOLOGY &nbsp;&times;&nbsp; A BRIGHTER TOMORROW</div>
+        </div>
+        <div class="hero__possib">THREE COLOURS.<br/>INFINITE POSSIBILITIES.</div>
+
+        <button class="scroll-cue" data-scroll-target="#shop" aria-label="Scroll">
+          <span></span>
+        </button>
+      </section>
+
+      <!-- SHOP / CAMPAIGNS (collapsible) -->
+      <section class="campaigns" id="shop">
+        <div class="campaigns__head">
+          <span class="eyebrow">SHOP</span>
+          <h2>Three colours.<br/><em>One obsession.</em></h2>
+        </div>
+        <div id="campaignList"></div>
+      </section>
+
+      <!-- COLLECTION CARDS -->
+      <section class="section collection" id="collection">
+        <div class="section__head">
+          <span class="eyebrow">THE DROP</span>
+          <h2>Pick your temperature.</h2>
+        </div>
+        <div class="cards" id="collectionCards"></div>
+      </section>
+
+      <!-- ENGINEERING -->
+      <section class="section tech" id="technology">
+        <div class="tech__grid">
+          <div class="tech__lead">
+            <span class="eyebrow">ENGINEERING</span>
+            <h2>Engineered down<br/>to the last stitch.</h2>
+            <p>Nothing decorative. Every layer earns its place, from the ripstop face to the baffles that trap heat where you need it.</p>
+          </div>
+          <div class="tech__acc" id="techAcc">
+            <button class="tech__tab is-open" data-acc="0">01 · 900-Fill Loft Core</button>
+            <div class="tech__panel is-open">
+              <img src="campaign/plates/green-neon.png" alt="" />
+              <p>An ultra-high fill power core traps more warm air per gram, so the jacket stays light while it stays warm.</p>
+            </div>
+            <button class="tech__tab" data-acc="1">02 · Liquid-Sheen Ripstop</button>
+            <div class="tech__panel">
+              <img src="campaign/plates/blue-hall.png" alt="" />
+              <p>A high-gloss ripstop shell resists tears and sheds weather, with the wet-look finish you can see in the light.</p>
+            </div>
+            <button class="tech__tab" data-acc="2">03 · Wind-Sealed Baffles</button>
+            <div class="tech__panel">
+              <img src="campaign/plates/pink-muse.png" alt="" />
+              <p>Welded, offset baffles kill cold spots at the seams and keep the silhouette clean from every angle.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="about-hero" id="about">
+        <img class="about-hero__img" src="campaign/about.png" alt="VELOX — Bold outside. More within." />
+        <button class="btn btn--pill btn--solid about-hero__cta" id="aboutCta">SHOP THE COLLECTION</button>
+      </section>
+
+      <footer class="footer">
+        <div class="footer__brand">VELOX</div>
+        <div class="footer__cols">
+          <div><h4>Shop</h4><a>Men</a><a>Women</a><a>New Arrivals</a></div>
+          <div><h4>Company</h4><a>About</a><a>Technology</a><a>Careers</a></div>
+          <div><h4>Support</h4><a>Sizing</a><a>Shipping</a><a>Returns</a></div>
+          <div><h4>Follow</h4><a>Instagram</a><a>YouTube</a><a>TikTok</a></div>
+        </div>
+        <div class="footer__base">
+          <span>© 2026 VELOX. All rights reserved.</span>
+          <span>THREE COLOURS. INFINITE POSSIBILITIES.</span>
+        </div>
+      </footer>
+    </main>
+
+    <!-- ===================== CART DRAWER ===================== -->
+    <div class="drawer-scrim" id="scrim"></div>
+    <aside class="cart" id="cart" aria-hidden="true">
+      <div class="cart__head">
+        <h3>Your Bag</h3>
+        <button class="cart__close" id="cartClose" aria-label="Close">
+          <svg viewBox="0 0 24 24"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="cart__items" id="cartItems"></div>
+      <div class="cart__empty" id="cartEmpty">Your bag is empty.</div>
+      <div class="cart__foot">
+        <div class="cart__row"><span>Subtotal</span><b id="cartTotal">$0</b></div>
+        <button class="btn btn--solid btn--block" id="checkoutBtn">CHECKOUT</button>
+        <div class="cart__note">Demo store — no payment is taken.</div>
+      </div>
+    </aside>
+
+    <!-- ===================== CHECKOUT MODAL (DEMO) ===================== -->
+    <div class="modal" id="checkoutModal" aria-hidden="true">
+      <div class="modal__box">
+        <button class="modal__close" id="checkoutClose" aria-label="Close">
+          <svg viewBox="0 0 24 24"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+        </button>
+        <span class="eyebrow">SECURE CHECKOUT</span>
+        <h3>Complete your order</h3>
+        <div class="demo-flag">DEMO ONLY — do not enter real card details. Nothing is saved or sent.</div>
+        <form id="checkoutForm" class="form" autocomplete="off">
+          <label>Email<input type="email" placeholder="you@example.com" required /></label>
+          <label>Name on card<input type="text" placeholder="Full name" required /></label>
+          <label>Card number<input type="text" inputmode="numeric" placeholder="0000 0000 0000 0000" maxlength="19" /></label>
+          <div class="form__row">
+            <label>Expiry<input type="text" placeholder="MM / YY" maxlength="7" /></label>
+            <label>CVC<input type="text" inputmode="numeric" placeholder="123" maxlength="4" /></label>
+          </div>
+          <button type="submit" class="btn btn--solid btn--block" id="payBtn">PAY <span id="payAmount">$0</span></button>
+          <div class="form__secure">Demo checkout for presentation purposes.</div>
+        </form>
+      </div>
+    </div>
+
+    <!-- ===================== WAITLIST MODAL ===================== -->
+    <div class="modal" id="waitModal" aria-hidden="true">
+      <div class="modal__box modal__box--sm">
+        <button class="modal__close" id="waitClose" aria-label="Close">
+          <svg viewBox="0 0 24 24"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+        </button>
+        <span class="eyebrow">EARLY ACCESS</span>
+        <h3>Join the VELOX list</h3>
+        <p class="modal__sub">Be first to the next drop. No spam, just the good stuff.</p>
+        <form id="waitForm" class="form">
+          <label>Email<input type="email" placeholder="you@example.com" required /></label>
+          <button type="submit" class="btn btn--solid btn--block">NOTIFY ME</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- ===================== TOAST ===================== -->
+    <div class="toast" id="toast"></div>
+
+  </body>
+</html>
