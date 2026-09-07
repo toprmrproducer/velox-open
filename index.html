@@ -11,8 +11,8 @@
       href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Outfit:wght@300;400;500;600;700&family=Rock+Salt&display=swap"
       rel="stylesheet"
     />
-    <script type="module" crossorigin src="./assets/index-CbzbSyXx.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-BO-rpmNk.css">
+    <script type="module" crossorigin src="./assets/index-Doo9j_fG.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CZipgAh9.css">
   </head>
   <body>
     <!-- ===================== LOADER ===================== -->
@@ -27,8 +27,12 @@
 
     <!-- ===================== DYNAMIC BACKGROUND ===================== -->
     <div class="bg" aria-hidden="true">
-      <div id="bgA" class="bg__layer is-active"></div>
-      <div id="bgB" class="bg__layer"></div>
+      <div id="bgA" class="bg__layer is-active">
+        <video muted loop playsinline preload="auto"></video>
+      </div>
+      <div id="bgB" class="bg__layer">
+        <video muted loop playsinline preload="auto"></video>
+      </div>
       <div class="bg__sweep" aria-hidden="true"></div>
       <div class="bg__grain" aria-hidden="true"></div>
       <div class="bg__vignette"></div>
@@ -74,9 +78,9 @@
       <section class="hero" id="hero">
         <div class="hero__orbit" id="heroOrbit" aria-hidden="true"></div>
         <div class="hero__copy">
-          <div class="hero__mark reveal">
+          <button type="button" class="hero__mark reveal" id="markShop" aria-label="Shop this colourway">
             <img id="heroMark" src="campaign/wordmarks/cash-money-green.png" alt="Cash Money Green" />
-          </div>
+          </button>
         </div>
 
         <button type="button" class="hero__label" id="labelShop">
