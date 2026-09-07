@@ -8,17 +8,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Outfit:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Outfit:wght@300;400;500;600;700&family=Rock+Salt&display=swap"
       rel="stylesheet"
     />
-    <script type="module" crossorigin src="./assets/index-BoCX4RyJ.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-DJJlwMuU.css">
+    <script type="module" crossorigin src="./assets/index-Bps8OYSa.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DBVxAlJU.css">
   </head>
   <body>
     <!-- ===================== LOADER ===================== -->
     <div id="loader" class="loader">
       <div class="loader__inner">
-        <div class="loader__brand">VELOX</div>
+        <img class="loader__lockup" src="brand/nav-lockup.png" alt="VELOX" />
         <div class="loader__bar"><span id="loaderFill" class="loader__fill"></span></div>
         <div class="loader__pct"><span id="loaderPct">0</span>%</div>
         <div class="loader__hint">Preparing the atelier</div>
@@ -40,10 +40,7 @@
     <!-- ===================== HERO OVERLAY ===================== -->
     <header class="nav">
       <a class="nav__brand" href="#top" aria-label="VELOX home">
-        <svg class="nav__mark" viewBox="0 0 40 40" aria-hidden="true">
-          <path d="M4 6 L20 34 L36 6" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        <span>VELOX</span>
+        <img class="nav__lockup" src="brand/nav-lockup.png" alt="VELOX" />
       </a>
       <nav class="nav__links" id="navLinks">
         <a href="#shop" data-scroll>Shop</a>
@@ -108,38 +105,55 @@
         </div>
       </section>
 
-      <!-- SHOP / CAMPAIGNS (collapsible) -->
-      <section class="campaigns" id="shop">
-        <div id="campaignList"></div>
+      <!-- INSPECT / SHOP -->
+      <section class="inspect" id="shop">
+        <div class="inspect__grid">
+          <div class="inspect__thumbs" id="inspectThumbs"></div>
+          <div class="inspect__stage">
+            <div class="inspect__plate" id="inspectPlate"></div>
+            <div class="inspect__jacket" id="inspectJacket"></div>
+            <button type="button" class="inspect__360" id="inspect360">360° VIEW</button>
+            <span class="inspect__tag">BUILT DIFFERENT</span>
+          </div>
+          <div class="inspect__buy" id="inspectBuy"></div>
+        </div>
+        <div class="inspect__feats">
+          <div><b>THERMAL-CORE</b><span>Advanced insulation</span></div>
+          <div><b>ULTRA-LIGHT</b><span>All-day comfort</span></div>
+          <div><b>WATER REPELLENT</b><span>All-weather ready</span></div>
+          <div><b>BUILT TO LAST</b><span>A brighter tomorrow</span></div>
+        </div>
       </section>
 
       <!-- COLLECTION CARDS -->
       <section class="section collection" id="collection">
+        <div class="section__head reveal">
+          <span class="eyebrow">THE DROP</span>
+          <h2>Three colourways. Inspect every stitch.</h2>
+        </div>
         <div class="cards" id="collectionCards"></div>
       </section>
 
       <!-- ENGINEERING -->
-      <section class="section tech" id="technology">
-        <div class="tech__grid">
-          <div class="tech__lead">
-            <span class="eyebrow">ENGINEERING</span>
-            <h2>Engineered down<br/>to the last stitch.</h2>
-            <p>Nothing decorative. Every layer earns its place, from the ripstop face to the baffles that trap heat where you need it.</p>
-          </div>
+      <section class="tech" id="technology">
+        <div class="tech__visual">
+          <img src="campaign/engineering.jpg" alt="VELOX engineering studio" />
+        </div>
+        <div class="tech__copy">
+          <span class="eyebrow">ENGINEERING</span>
+          <h2>Engineered down to the last stitch.</h2>
+          <p>Nothing decorative. Every layer earns its place, from the ripstop face to the baffles that trap heat where you need it.</p>
           <div class="tech__acc" id="techAcc">
             <button class="tech__tab is-open" data-acc="0">01 · 900-Fill Loft Core</button>
             <div class="tech__panel is-open">
-              <img src="campaign/plates/green-neon.png" alt="" />
               <p>An ultra-high fill power core traps more warm air per gram, so the jacket stays light while it stays warm.</p>
             </div>
             <button class="tech__tab" data-acc="1">02 · Liquid-Sheen Ripstop</button>
             <div class="tech__panel">
-              <img src="campaign/plates/blue-hall.png" alt="" />
               <p>A high-gloss ripstop shell resists tears and sheds weather, with the wet-look finish you can see in the light.</p>
             </div>
             <button class="tech__tab" data-acc="2">03 · Wind-Sealed Baffles</button>
             <div class="tech__panel">
-              <img src="campaign/plates/pink-muse.png" alt="" />
               <p>Welded, offset baffles kill cold spots at the seams and keep the silhouette clean from every angle.</p>
             </div>
           </div>
@@ -153,7 +167,7 @@
       </section>
 
       <footer class="footer">
-        <div class="footer__brand">VELOX</div>
+        <img class="footer__lockup" src="brand/lockup.png" alt="VELOX — Warmth, reengineered." />
         <div class="footer__cols">
           <div><h4>Shop</h4><a>Men</a><a>Women</a><a>New Arrivals</a></div>
           <div><h4>Company</h4><a>About</a><a>Technology</a><a>Careers</a></div>
