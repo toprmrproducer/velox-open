@@ -11,8 +11,8 @@
       href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Outfit:wght@300;400;500;600;700&family=Rock+Salt&display=swap"
       rel="stylesheet"
     />
-    <script type="module" crossorigin src="./assets/index-DkwnbtPu.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-DBVxAlJU.css">
+    <script type="module" crossorigin src="./assets/index-Vyj99l1y.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-jZZixjO3.css">
   </head>
   <body>
     <!-- ===================== LOADER ===================== -->
@@ -44,9 +44,9 @@
       </a>
       <nav class="nav__links" id="navLinks">
         <a href="#shop" data-scroll>Shop</a>
-        <a href="#collection" data-scroll>Collections</a>
-        <a href="#technology" data-scroll>Engineering</a>
-        <a href="#about" data-scroll>About</a>
+        <a href="#technology" data-scroll>Technology</a>
+        <a href="#about" data-scroll>Our Story</a>
+        <a href="#voices" data-scroll>Community</a>
       </nav>
       <button class="nav__burger" id="navBurger" aria-label="Menu" aria-expanded="false">
         <span></span><span></span>
@@ -105,65 +105,70 @@
         </div>
       </section>
 
-      <!-- INSPECT / SHOP -->
-      <section class="inspect" id="shop">
-        <div class="inspect__grid">
-          <div class="inspect__thumbs" id="inspectThumbs"></div>
-          <div class="inspect__stage">
-            <div class="inspect__plate" id="inspectPlate"></div>
-            <div class="inspect__jacket" id="inspectJacket"></div>
-            <button type="button" class="inspect__360" id="inspect360">360° VIEW</button>
-            <span class="inspect__tag">BUILT DIFFERENT</span>
-          </div>
-          <div class="inspect__buy" id="inspectBuy"></div>
+      <!-- MANIFESTO -->
+      <section class="manifesto" id="about">
+        <div class="manifesto__copy reveal">
+          <span class="eyebrow">VELOX</span>
+          <h2>Rebel against<br/>the ordinary.</h2>
+          <p class="manifesto__line">Express yourself.<br/>Wear your personality.</p>
         </div>
-        <div class="inspect__feats">
-          <div><b>THERMAL-CORE</b><span>Advanced insulation</span></div>
-          <div><b>ULTRA-LIGHT</b><span>All-day comfort</span></div>
-          <div><b>WATER REPELLENT</b><span>All-weather ready</span></div>
-          <div><b>BUILT TO LAST</b><span>A brighter tomorrow</span></div>
+        <div class="manifesto__visual">
+          <img src="campaign/about.png" alt="VELOX puffer" />
         </div>
       </section>
 
-      <!-- COLLECTION CARDS -->
-      <section class="section collection" id="collection">
+      <!-- NANO PRENE -->
+      <section class="nano" id="technology">
+        <div class="nano__visual">
+          <img src="campaign/engineering.jpg" alt="Nano Prene Tech" />
+        </div>
+        <div class="nano__copy reveal">
+          <span class="eyebrow">NANO PRENE TECH™</span>
+          <h2>For everything life throws at you.</h2>
+          <p>Join the rebellion. Choose what you believe in.</p>
+        </div>
+      </section>
+
+      <!-- SHOP / THREE BUYS -->
+      <section class="section collection" id="shop">
         <div class="section__head reveal">
           <span class="eyebrow">THE DROP</span>
-          <h2>Three colourways. Inspect every stitch.</h2>
+          <h2>Choose what you believe in.</h2>
         </div>
         <div class="cards" id="collectionCards"></div>
       </section>
 
-      <!-- ENGINEERING -->
-      <section class="tech" id="technology">
-        <div class="tech__visual">
-          <img src="campaign/engineering.jpg" alt="VELOX engineering studio" />
+      <!-- VOICES -->
+      <section class="voices" id="voices">
+        <div class="voices__head reveal">
+          <span class="eyebrow">THE MOVEMENT</span>
+          <h2>Join the other revolutionaries in the mission to change the world.</h2>
         </div>
-        <div class="tech__copy">
-          <span class="eyebrow">ENGINEERING</span>
-          <h2>Engineered down to the last stitch.</h2>
-          <p>Nothing decorative. Every layer earns its place, from the ripstop face to the baffles that trap heat where you need it.</p>
-          <div class="tech__acc" id="techAcc">
-            <button class="tech__tab is-open" data-acc="0">01 · 900-Fill Loft Core</button>
-            <div class="tech__panel is-open">
-              <p>An ultra-high fill power core traps more warm air per gram, so the jacket stays light while it stays warm.</p>
-            </div>
-            <button class="tech__tab" data-acc="1">02 · Liquid-Sheen Ripstop</button>
-            <div class="tech__panel">
-              <p>A high-gloss ripstop shell resists tears and sheds weather, with the wet-look finish you can see in the light.</p>
-            </div>
-            <button class="tech__tab" data-acc="2">03 · Wind-Sealed Baffles</button>
-            <div class="tech__panel">
-              <p>Welded, offset baffles kill cold spots at the seams and keep the silhouette clean from every angle.</p>
-            </div>
-          </div>
+        <div class="voices__grid">
+          <figure class="voice">
+            <img src="campaign/plates/green-neon.png" alt="" />
+            <figcaption>
+              <div class="voice__stars" aria-label="5 stars">★★★★★</div>
+              <p>Great fabric.</p>
+            </figcaption>
+          </figure>
+          <figure class="voice">
+            <img src="campaign/plates/blue-hall.png" alt="" />
+            <figcaption>
+              <div class="voice__stars" aria-label="5 stars">★★★★★</div>
+              <p>Great color, my fav jacket.</p>
+            </figcaption>
+          </figure>
         </div>
       </section>
 
-      <!-- ABOUT -->
-      <section class="about-hero" id="about">
-        <img class="about-hero__img" src="campaign/about.png" alt="VELOX — Bold outside. More within." />
-        <button class="btn btn--pill btn--solid about-hero__cta" id="aboutCta">SHOP THE COLLECTION</button>
+      <!-- LIMITED -->
+      <section class="freedom" id="freedom">
+        <div class="freedom__inner reveal">
+          <span class="eyebrow">FW26</span>
+          <h2>Limited stocks only.<br/>Will you choose freedom?</h2>
+          <button class="btn btn--solid" id="aboutCta">BUY NOW</button>
+        </div>
       </section>
 
       <footer class="footer">
@@ -176,7 +181,7 @@
         </div>
         <div class="footer__base">
           <span>© 2026 VELOX. All rights reserved.</span>
-          <span>THREE COLOURS. INFINITE POSSIBILITIES.</span>
+          <span>REBEL AGAINST THE ORDINARY.</span>
         </div>
       </footer>
     </main>
