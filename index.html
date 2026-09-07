@@ -11,8 +11,8 @@
       href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Outfit:wght@300;400;500;600;700&family=Rock+Salt&display=swap"
       rel="stylesheet"
     />
-    <script type="module" crossorigin src="./assets/index-qqGpYwms.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-Ca6HE4I5.css">
+    <script type="module" crossorigin src="./assets/index-BC18kFE2.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-VbYyfDTl.css">
   </head>
   <body>
     <!-- ===================== LOADER ===================== -->
@@ -51,6 +51,10 @@
       <button class="nav__burger" id="navBurger" aria-label="Menu" aria-expanded="false">
         <span></span><span></span>
       </button>
+      <div class="nav__bg" role="group" aria-label="Background variant">
+        <a href="./" class="nav__bg-btn" data-bg="frame">Campaign</a>
+        <a href="./?bg=mountain" class="nav__bg-btn" data-bg="mountain">Mountain</a>
+      </div>
       <div class="nav__right">
         <button class="nav__icon" id="navSearch" aria-label="Search">
           <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg>
@@ -68,6 +72,7 @@
     <main id="top">
       <!-- HERO -->
       <section class="hero" id="hero">
+        <div class="hero__orbit" id="heroOrbit" aria-hidden="true"></div>
         <div class="hero__copy">
           <div class="hero__mark reveal">
             <img id="heroMark" src="campaign/wordmarks/cash-money-green.png" alt="Cash Money Green" />
@@ -193,7 +198,7 @@
         </div>
         <div class="footer__base">
           <span>© 2026 VELOX. All rights reserved.</span>
-          <span>REBEL AGAINST THE ORDINARY.</span>
+          <span>REBEL AGAINST THE ORDINARY. · <a href="./">Campaign bg</a> · <a href="./?bg=mountain">Mountain bg</a></span>
         </div>
       </footer>
     </main>
