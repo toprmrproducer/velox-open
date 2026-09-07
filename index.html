@@ -11,8 +11,8 @@
       href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Outfit:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <script type="module" crossorigin src="./assets/index-DhELVpTd.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-DWPQKbLb.css">
+    <script type="module" crossorigin src="./assets/index-KKAj8-Fg.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CndKUa3s.css">
   </head>
   <body>
     <!-- ===================== LOADER ===================== -->
@@ -65,52 +65,22 @@
           <svg viewBox="0 0 24 24"><path d="M6 7h12l-1.2 12.2a2 2 0 0 1-2 1.8H9.2a2 2 0 0 1-2-1.8L6 7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
           <span class="nav__badge" id="cartCount">0</span>
         </button>
-        <span class="nav__tag">A HIGHER<br/>STANDARD</span>
       </div>
     </header>
 
     <main id="top">
       <!-- HERO -->
       <section class="hero" id="hero">
-        <!-- left copy -->
         <div class="hero__copy">
-          <div class="eyebrow reveal">VELOX · A HIGHER STANDARD</div>
           <div class="hero__mark reveal">
             <img id="heroMark" src="campaign/wordmarks/cash-money-green.png" alt="Cash Money Green" />
           </div>
-          <p class="hero__tag reveal" id="heroTag">More than money. A mindset.</p>
-          <p class="hero__blurb reveal" id="heroBlurb">
-            High-visibility lime. Feather-light fill, ripstop shell — engineered to be seen and to last.
-          </p>
           <button class="btn btn--pill reveal" id="exploreBtn">
             SHOP CASH MONEY GREEN
             <svg viewBox="0 0 24 24"><line x1="4" y1="12" x2="19" y2="12"/><polyline points="13 6 20 12 13 18"/></svg>
           </button>
-
-          <div class="hero__pager reveal">
-            <span class="dash" data-go="0"></span>
-            <span class="dash" data-go="1"></span>
-            <span class="dash" data-go="2"></span>
-            <span class="pager__num"><b id="pagerCur">01</b> / 03</span>
-          </div>
-
-          <ul class="features reveal">
-            <li>
-              <svg viewBox="0 0 24 24"><path d="M12 3c4 4 6 7 6 11a6 6 0 0 1-12 0c0-4 2-7 6-11z"/></svg>
-              <span>ULTRA<br/>LIGHTWEIGHT</span>
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24"><path d="M8 4v9a4 4 0 1 0 8 0V4"/><path d="M12 20v-2"/></svg>
-              <span>THERMAL<br/>PERFORMANCE</span>
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24"><path d="M12 3l4 5-4 13-4-13 4-5z"/><line x1="8" y1="8" x2="16" y2="8"/></svg>
-              <span>PREMIUM<br/>MATERIALS</span>
-            </li>
-          </ul>
         </div>
 
-        <!-- center product label -->
         <div class="hero__label">
           <span class="hero__label-idx" id="labelIdx">01</span>
           <div>
@@ -120,10 +90,14 @@
           </div>
         </div>
 
-        <!-- right side cards (the other two colourways) -->
         <div class="sidecards" id="sidecards"></div>
 
-        <!-- bottom-right controls -->
+        <div class="picker" id="picker" aria-label="Choose a colourway" style="background-image:url('campaign/picker.png')">
+          <button type="button" data-pick="2" aria-label="Bad Bitch Pink"></button>
+          <button type="button" data-pick="1" aria-label="Badass Blue"></button>
+          <button type="button" data-pick="0" aria-label="Cash Money Green"></button>
+        </div>
+
         <div class="hero__arrows">
           <button class="round-btn" id="prevBtn" aria-label="Previous jacket">
             <svg viewBox="0 0 24 24"><polyline points="15 6 9 12 15 18"/></svg>
@@ -132,43 +106,15 @@
             <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg>
           </button>
         </div>
-
-        <!-- interaction hints -->
-        <div class="hint hint--drag" id="hintDrag">
-          <svg viewBox="0 0 24 24"><rect x="8" y="3" width="8" height="13" rx="4"/><line x1="12" y1="6" x2="12" y2="9"/></svg>
-          CLICK + DRAG TO ROTATE
-        </div>
-        <div class="hint hint--light">
-          <svg viewBox="0 0 24 24"><rect x="8" y="3" width="8" height="13" rx="4"/><path d="M12 20v1"/></svg>
-          MOVE MOUSE TO SHIFT LIGHT
-        </div>
-
-        <!-- bottom bar -->
-        <div class="hero__foot">
-          <div class="hero__foot-left">FASHION &nbsp;&times;&nbsp; TECHNOLOGY &nbsp;&times;&nbsp; A BRIGHTER TOMORROW</div>
-        </div>
-        <div class="hero__possib">THREE COLOURS.<br/>INFINITE POSSIBILITIES.</div>
-
-        <button class="scroll-cue" data-scroll-target="#shop" aria-label="Scroll">
-          <span></span>
-        </button>
       </section>
 
       <!-- SHOP / CAMPAIGNS (collapsible) -->
       <section class="campaigns" id="shop">
-        <div class="campaigns__head">
-          <span class="eyebrow">SHOP</span>
-          <h2>Three colours.<br/><em>One obsession.</em></h2>
-        </div>
         <div id="campaignList"></div>
       </section>
 
       <!-- COLLECTION CARDS -->
       <section class="section collection" id="collection">
-        <div class="section__head">
-          <span class="eyebrow">THE DROP</span>
-          <h2>Pick your temperature.</h2>
-        </div>
         <div class="cards" id="collectionCards"></div>
       </section>
 
