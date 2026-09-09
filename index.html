@@ -7,12 +7,14 @@
     <meta name="description" content="VELOX FW26. Three colours. Infinite possibilities. An interactive 3D puffer experience." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="image" href="campaign/wordmarks/cash-money-green.webp" />
+    <link rel="preload" as="image" href="backgrounds/loop-green.jpg" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Outfit:wght@300;400;500;600;700&family=Rock+Salt&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Outfit:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <script type="module" crossorigin src="./assets/main-Br77VkiE.js"></script>
-    <link rel="modulepreload" crossorigin href="./assets/products-BCAh1taa.js">
+    <script type="module" crossorigin src="./assets/main-BcceQpM2.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/products-JycdVr5i.js">
     <link rel="stylesheet" crossorigin href="./assets/products-ju5vfCDr.css">
   </head>
   <body>
@@ -29,10 +31,10 @@
     <!-- ===================== DYNAMIC BACKGROUND ===================== -->
     <div class="bg" aria-hidden="true">
       <div id="bgA" class="bg__layer is-active">
-        <video muted loop playsinline preload="auto"></video>
+        <video muted loop playsinline preload="none"></video>
       </div>
       <div id="bgB" class="bg__layer">
-        <video muted loop playsinline preload="auto"></video>
+        <video muted loop playsinline preload="none"></video>
       </div>
       <div class="bg__sweep" aria-hidden="true"></div>
       <div class="bg__grain" aria-hidden="true"></div>
@@ -80,7 +82,7 @@
         <div class="hero__orbit" id="heroOrbit" aria-hidden="true"></div>
         <div class="hero__copy">
           <button type="button" class="hero__mark reveal" id="markShop" aria-label="Shop this colourway">
-            <img id="heroMark" src="campaign/wordmarks/cash-money-green.png" alt="Cash Money Green" />
+            <img id="heroMark" src="campaign/wordmarks/cash-money-green.webp" alt="Cash Money Green" fetchpriority="high" />
           </button>
         </div>
 
@@ -95,7 +97,7 @@
 
         <div class="sidecards" id="sidecards"></div>
 
-        <div class="picker" id="picker" aria-label="Choose a colourway" style="background-image:url('campaign/picker.png')">
+        <div class="picker" id="picker" aria-label="Choose a colourway" style="background-image:url('campaign/picker.webp')">
           <button type="button" data-pick="2" aria-label="Bad Bitch Pink"></button>
           <button type="button" data-pick="1" aria-label="Badass Blue"></button>
           <button type="button" data-pick="0" aria-label="Cash Money Green"></button>
@@ -119,17 +121,17 @@
           <p class="manifesto__line">Express yourself.<br/>Wear your personality.</p>
         </div>
         <div class="manifesto__visual">
-          <img src="campaign/about.png" alt="VELOX puffer" />
+          <img src="campaign/about.webp" alt="VELOX puffer" loading="lazy" />
         </div>
       </section>
 
       <!-- NANO PRENE -->
       <section class="nano" id="technology">
         <div class="nano__visual">
-          <img src="campaign/details/green-wet.jpg" alt="VELOX Nano Prene shell" />
+          <img src="campaign/details/green-wet.jpg" alt="VELOX Nano Prene shell" loading="lazy" />
           <div class="nano__strip">
-            <img src="campaign/details/blue-wet.jpg" alt="Badass Blue shell" />
-            <img src="campaign/details/pink-wet.jpg" alt="Bad Bitch Pink shell" />
+            <img src="campaign/details/blue-wet.jpg" alt="Badass Blue shell" loading="lazy" />
+            <img src="campaign/details/pink-wet.jpg" alt="Bad Bitch Pink shell" loading="lazy" />
           </div>
         </div>
         <div class="nano__copy reveal">
@@ -157,21 +159,21 @@
         </div>
         <div class="voices__grid">
           <figure class="voice">
-            <img src="campaign/details/green-collar.jpg" alt="Cash Money Green collar" />
+            <img src="campaign/details/green-collar.jpg" alt="Cash Money Green collar" loading="lazy" />
             <figcaption>
               <div class="voice__stars" aria-label="5 stars">★★★★★</div>
               <p>Great fabric.</p>
             </figcaption>
           </figure>
           <figure class="voice">
-            <img src="campaign/details/pink-collar.jpg" alt="Bad Bitch Pink collar" />
+            <img src="campaign/details/pink-collar.jpg" alt="Bad Bitch Pink collar" loading="lazy" />
             <figcaption>
               <div class="voice__stars" aria-label="5 stars">★★★★★</div>
               <p>Great color, my fav jacket.</p>
             </figcaption>
           </figure>
           <figure class="voice">
-            <img src="campaign/details/blue-collar.jpg" alt="Badass Blue collar" />
+            <img src="campaign/details/blue-collar.jpg" alt="Badass Blue collar" loading="lazy" />
             <figcaption>
               <div class="voice__stars" aria-label="5 stars">★★★★★</div>
               <p>Not just a color. A mindset.</p>
