@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>VELOX — Shop</title>
+    <meta name="description" content="Shop VELOX FW26. Cash Money Green, Badass Blue, Bad Bitch Pink." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="./assets/buy-qXTRgb4b.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/products-BIw6-FSk.js">
+    <link rel="stylesheet" crossorigin href="./assets/products-CGnV2P42.css">
+  </head>
+  <body class="pdp-page">
+    <header class="nav">
+      <a class="nav__brand" href="./" aria-label="VELOX home">
+        <img class="nav__lockup" src="brand/nav-lockup.png" alt="VELOX" />
+      </a>
+      <nav class="nav__links" id="navLinks">
+        <a href="./">Campaign</a>
+        <a href="./#shop">Shop</a>
+        <a href="./#technology">Technology</a>
+        <a href="./#about">Our Story</a>
+      </nav>
+      <button class="nav__burger" id="navBurger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+      <div class="nav__right">
+        <button class="nav__icon nav__cart" id="navCart" aria-label="Cart">
+          <svg viewBox="0 0 24 24"><path d="M6 7h12l-1.2 12.2a2 2 0 0 1-2 1.8H9.2a2 2 0 0 1-2-1.8L6 7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+          <span class="nav__badge" id="cartCount">0</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="pdp" id="pdp">
+      <nav class="pdp__crumbs" id="crumbs"></nav>
+
+      <section class="pdp__grid">
+        <div class="pdp__thumbs" id="thumbs"></div>
+        <div class="pdp__stage" id="stage">
+          <img id="stageA" class="pdp__shot is-on" alt="" />
+          <img id="stageB" class="pdp__shot" alt="" />
+          <button class="pdp__arrow pdp__arrow--prev" id="prevShot" aria-label="Previous">
+            <svg viewBox="0 0 24 24"><polyline points="15 6 9 12 15 18"/></svg>
+          </button>
+          <button class="pdp__arrow pdp__arrow--next" id="nextShot" aria-label="Next">
+            <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg>
+          </button>
+          <span class="pdp__badge" id="shotBadge">LOOK 01</span>
+        </div>
+        <aside class="pdp__info" id="info"></aside>
+      </section>
+
+      <p class="pdp__fit" id="fitNote"></p>
+
+      <section class="pdp__ratings">
+        <h2>Ratings</h2>
+        <div class="pdp__ratings-grid">
+          <div>
+            <div class="pdp__score"><b>5.0</b> ★</div>
+            <div class="pdp__score-sub" id="reviewCount">2 reviews</div>
+          </div>
+          <div>
+            <h3>Customer opinion</h3>
+            <blockquote>“Great fabric.”</blockquote>
+            <blockquote>“Great color, my fav jacket.”</blockquote>
+          </div>
+        </div>
+      </section>
+
+      <section class="pdp__similar">
+        <h2>Similar colourways</h2>
+        <div class="pdp__similar-row" id="similar"></div>
+      </section>
+    </main>
+
+    <div class="drawer-scrim" id="scrim"></div>
+    <aside class="cart" id="cart" aria-hidden="true">
+      <div class="cart__head">
+        <h3>Your Bag</h3>
+        <button class="cart__close" id="cartClose" aria-label="Close">
+          <svg viewBox="0 0 24 24"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="cart__items" id="cartItems"></div>
+      <div class="cart__empty" id="cartEmpty">Your bag is empty.</div>
+      <div class="cart__foot">
+        <div class="cart__row"><span>Subtotal</span><b id="cartTotal">$0</b></div>
+        <a class="btn btn--solid btn--block" href="./#shop">KEEP SHOPPING</a>
+      </div>
+    </aside>
+
+    <div class="toast" id="toast"></div>
+  </body>
+</html>
