@@ -8,12 +8,37 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="preload"
+      as="style"
       href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Outfit:wght@400;500;600&display=swap"
-      rel="stylesheet"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
-    <script type="module" crossorigin src="./assets/buy-DMdcFFI5.js"></script>
-    <link rel="modulepreload" crossorigin href="./assets/products-JycdVr5i.js">
-    <link rel="stylesheet" crossorigin href="./assets/products-ju5vfCDr.css">
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Outfit:wght@400;500;600&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+    <script>
+      (function () {
+        var id = new URLSearchParams(location.search).get('id') || 'lime';
+        var src = {
+          lime: 'campaign/looks/green-studio-full.jpg',
+          blue: 'campaign/looks/blue-studio-full.jpg',
+          pink: 'campaign/looks/pink-studio-a.jpg',
+        }[id] || 'campaign/looks/green-studio-full.jpg';
+        var l = document.createElement('link');
+        l.rel = 'preload';
+        l.as = 'image';
+        l.href = src;
+        l.fetchPriority = 'high';
+        document.head.appendChild(l);
+      })();
+    </script>
+    <script type="module" crossorigin src="./assets/buy-DVvK4HD_.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/products-C40Esl2F.js">
+    <link rel="stylesheet" crossorigin href="./assets/products-sGhuWvMR.css">
+      <link rel="modulepreload" crossorigin href="./assets/scene3d-ComsFr7d.js">
   </head>
   <body class="pdp-page">
     <header class="nav">
@@ -43,6 +68,7 @@
       <section class="pdp__grid">
         <div class="pdp__thumbs" id="thumbs"></div>
         <div class="pdp__stage" id="stage">
+          <canvas id="inspect3d" class="pdp__gl" aria-label="3D inspect"></canvas>
           <img id="stageA" class="pdp__shot is-on" alt="" />
           <img id="stageB" class="pdp__shot" alt="" />
           <button class="pdp__arrow pdp__arrow--prev" id="prevShot" aria-label="Previous">

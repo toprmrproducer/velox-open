@@ -7,15 +7,25 @@
     <meta name="description" content="VELOX FW26. Three colours. Infinite possibilities. An interactive 3D puffer experience." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" as="image" href="campaign/wordmarks/cash-money-green.webp" />
+    <link rel="preload" as="image" href="campaign/wordmarks/cash-money-green.webp" fetchpriority="high" />
     <link rel="preload" as="image" href="backgrounds/loop-green.jpg" />
+    <link rel="preload" href="models/green.glb" as="fetch" type="model/gltf-binary" crossorigin fetchpriority="high" />
     <link
+      rel="preload"
+      as="style"
       href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Outfit:wght@400;500;600&display=swap"
-      rel="stylesheet"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
-    <script type="module" crossorigin src="./assets/main-BcceQpM2.js"></script>
-    <link rel="modulepreload" crossorigin href="./assets/products-JycdVr5i.js">
-    <link rel="stylesheet" crossorigin href="./assets/products-ju5vfCDr.css">
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Outfit:wght@400;500;600&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+    <script type="module" crossorigin src="./assets/main-DZ9XBaus.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/products-C40Esl2F.js">
+    <link rel="stylesheet" crossorigin href="./assets/products-sGhuWvMR.css">
+      <link rel="modulepreload" crossorigin href="./assets/scene3d-ComsFr7d.js">
   </head>
   <body>
     <!-- ===================== LOADER ===================== -->
@@ -183,7 +193,7 @@
       </section>
 
       <!-- LIMITED -->
-      <section class="freedom" id="freedom" style="background-image:linear-gradient(180deg,rgba(5,6,10,.55),rgba(5,6,10,.72)),url('campaign/details/green-collar.jpg')">
+      <section class="freedom" id="freedom">
         <div class="freedom__inner reveal">
           <span class="eyebrow">FW26</span>
           <h2>Limited stocks only.<br/>Will you choose freedom?</h2>
@@ -192,7 +202,7 @@
       </section>
 
       <footer class="footer">
-        <img class="footer__lockup" src="brand/lockup.png" alt="VELOX — Warmth, reengineered." />
+        <img class="footer__lockup" src="brand/lockup.png" alt="VELOX — Warmth, reengineered." loading="lazy" />
         <div class="footer__cols">
           <div><h4>Shop</h4><a>Men</a><a>Women</a><a>New Arrivals</a></div>
           <div><h4>Company</h4><a>About</a><a>Technology</a><a>Careers</a></div>
